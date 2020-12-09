@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
 	selector: 'cmail-caixa-de-entrada',
 	templateUrl: './caixa-de-entrada.component.html',
@@ -12,6 +13,9 @@ export class CaixaDeEntradaComponent {
 		destinatario: '',
 		assunto: '',
 		conteudo: ''
+	}
+	constructor(private	roteador: Router){
+		console.log(roteador.url);
 	}
 	get isNewEmailFormOpen() {
 		return this._isNewEmailFormOpen;
